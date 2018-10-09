@@ -1,3 +1,7 @@
+
+import java.time.LocalDate;
+import java.time.Month;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -90,7 +94,22 @@ public class GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btUpdateActionPerformed
-        
+        LocalDate year = LocalDate.of(1,1,2010);
+        switch(cbYear.getSelectedIndex())
+        {
+            case 0: year = LocalDate.of(1,1,2010);
+            case 1: year = LocalDate.of(1,1,2011);
+            case 2: year = LocalDate.of(1,1,2012);
+            case 3: year = LocalDate.of(1,1,2013);
+            case 4: year = LocalDate.of(1,1,2014);
+            case 5: year = LocalDate.of(1,1,2015);
+            case 6: year = LocalDate.of(1,1,2016);
+            case 7: year = LocalDate.of(1,1,2017);
+            case 8: year = LocalDate.of(1,1,2018);
+            case 9: year = LocalDate.of(1,1,2019);
+            case 10: year = LocalDate.of(1,1,2020);
+        }
+        tm.filter(year);
     }//GEN-LAST:event_btUpdateActionPerformed
 
     /**
