@@ -9,6 +9,11 @@ public class Modell extends AbstractTableModel {
             = {"Bezeichnung", "AK", "inbetr.nahme", "ND", "bish.ND", "Afa bisher", "Wert vor...", "Afa d. J.", "BW 31.12"};
 
     @Override
+    public String getColumnName(int column) {
+        return colNames[column];
+    }
+
+    @Override
     public int getRowCount() {
         return entries.size();
     }
@@ -22,6 +27,10 @@ public class Modell extends AbstractTableModel {
     public Object getValueAt(int rowIndex, int columnIndex) {
         Entry e = entries.get(rowIndex);
         return e;
+    }
+
+    private void add(Entry e) {
+        entries.add(e);
     }
 
 }
