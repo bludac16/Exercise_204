@@ -31,6 +31,7 @@ public class Modell extends AbstractTableModel {
 
     private void add(Entry e) {
         entries.add(e);
+        fireTableRowsInserted(entries.size()-1,entries.size()-1);
     }
 
 }
