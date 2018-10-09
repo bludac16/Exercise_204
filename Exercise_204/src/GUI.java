@@ -13,8 +13,10 @@ public class GUI extends javax.swing.JFrame {
     /**
      * Creates new form GUI
      */
+    private Modell tm = new Modell();
     public GUI() {
         initComponents();
+        tableEntry.setModel(tm);
     }
 
     /**
@@ -51,6 +53,11 @@ public class GUI extends javax.swing.JFrame {
         getContentPane().add(cbYear, gridBagConstraints);
 
         btUpdate.setText("Update Table");
+        btUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btUpdateActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 1.0;
@@ -81,6 +88,10 @@ public class GUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btUpdateActionPerformed
+        
+    }//GEN-LAST:event_btUpdateActionPerformed
 
     /**
      * @param args the command line arguments
