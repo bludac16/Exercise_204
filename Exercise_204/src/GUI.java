@@ -1,6 +1,7 @@
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.format.DateTimeFormatter;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -94,20 +95,22 @@ public class GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btUpdateActionPerformed
-        LocalDate year = LocalDate.of(1,1,2010);
+        LocalDate year;
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         switch(cbYear.getSelectedIndex())
         {
-            case 0: year = LocalDate.of(1,1,2010);
-            case 1: year = LocalDate.of(1,1,2011);
-            case 2: year = LocalDate.of(1,1,2012);
-            case 3: year = LocalDate.of(1,1,2013);
-            case 4: year = LocalDate.of(1,1,2014);
-            case 5: year = LocalDate.of(1,1,2015);
-            case 6: year = LocalDate.of(1,1,2016);
-            case 7: year = LocalDate.of(1,1,2017);
-            case 8: year = LocalDate.of(1,1,2018);
-            case 9: year = LocalDate.of(1,1,2019);
-            case 10: year = LocalDate.of(1,1,2020);
+            case 0: year = LocalDate.parse("01.01.2010", dtf);break;
+            case 1: year = LocalDate.parse("01.01.2011", dtf);break;
+            case 2: year = LocalDate.parse("01.01.2012", dtf);break;
+            case 3: year = LocalDate.parse("01.01.2013", dtf);break;
+            case 4: year = LocalDate.parse("01.01.2014", dtf);break;
+            case 5: year = LocalDate.parse("01.01.2015", dtf);break;
+            case 6: year = LocalDate.parse("01.01.2016", dtf);break;
+            case 7: year = LocalDate.parse("01.01.2017", dtf);break;
+            case 8: year = LocalDate.parse("01.01.2018", dtf);break;
+            case 9: year = LocalDate.parse("01.01.2019", dtf);break;
+            case 10: year = LocalDate.parse("01.01.2020", dtf);break;
+            default: year = LocalDate.parse("01.01.2010", dtf);break;
         }
         tm.filter(year);
     }//GEN-LAST:event_btUpdateActionPerformed
